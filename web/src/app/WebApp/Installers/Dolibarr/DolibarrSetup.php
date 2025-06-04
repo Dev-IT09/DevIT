@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Hestia\WebApp\Installers\Dolibarr;
+namespace WebApp\Installers\Dolibarr;
 
-use Hestia\WebApp\BaseSetup;
-use Hestia\WebApp\InstallationTarget\InstallationTarget;
+use WebApp\BaseSetup;
+use WebApp\InstallationTarget\InstallationTarget;
 use function file_get_contents;
 
 class DolibarrSetup extends BaseSetup

@@ -1,5 +1,5 @@
 <?php
-use function Hestiacp\quoteshellarg\quoteshellarg;
+use function p\quoteshellarg\quoteshellarg;
 
 $TAB = "WEB";
 
@@ -88,7 +88,7 @@ $v_locality = quoteshellarg($_POST["v_locality"]);
 $v_org = quoteshellarg($_POST["v_org"]);
 
 exec(
-	HESTIA_CMD .
+	CMD .
 		"v-generate-ssl-cert " .
 		$v_domain .
 		" " .

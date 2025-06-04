@@ -13,12 +13,12 @@
 #----------------------------------------------------------#
 
 # Includes
-# shellcheck source=/etc/hestiacp/hestia.conf
-source /etc/hestiacp/hestia.conf
-# shellcheck source=/usr/local/hestia/func/main.sh
-source $HESTIA/func/main.sh
-# shellcheck source=/usr/local/hestia/conf/hestia.conf
-source $HESTIA/conf/hestia.conf
+# shellcheck source=/etc/p/Donf
+source /etc/p/Donf
+# shellcheck source=/usr/local/func/main.sh
+source $func/main.sh
+# shellcheck source=/usr/local/conf/Donf
+source $conf/Donf
 
 function setupFiles {
 	echo "Use SMTP account for server communication (Y/n): "

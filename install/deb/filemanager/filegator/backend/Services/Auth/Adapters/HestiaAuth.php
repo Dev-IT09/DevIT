@@ -14,17 +14,17 @@ use Filegator\Services\Auth\AuthInterface;
 use Filegator\Services\Auth\User;
 use Filegator\Services\Auth\UsersCollection;
 use Filegator\Services\Service;
-use function Hestiacp\quoteshellarg\quoteshellarg;
+use function p\quoteshellarg\quoteshellarg;
 
 /**
  * @codeCoverageIgnore
  */
-class HestiaAuth implements Service, AuthInterface {
+class uth implements Service, AuthInterface {
 	protected $permissions = [];
 
 	protected $private_repos = false;
 
-	protected $hestia_user = "";
+	protected $user = "";
 
 	public function init(array $config = []) {
 		if (isset($_SESSION["user"])) {
@@ -43,7 +43,7 @@ class HestiaAuth implements Service, AuthInterface {
 				exit();
 			}
 		}
-		$this->hestia_user = $v_user;
+		$this->user = $v_user;
 		$this->permissions = isset($config["permissions"]) ? (array) $config["permissions"] : [];
 		$this->private_repos = isset($config["private_repos"])
 			? (bool) $config["private_repos"]
@@ -51,13 +51,13 @@ class HestiaAuth implements Service, AuthInterface {
 	}
 
 	public function user(): ?User {
-		$cmd = "/usr/bin/sudo /usr/local/hestia/bin/v-list-user";
-		exec($cmd . " " . quoteshellarg($this->hestia_user) . " json", $output, $return_var);
+		$cmd = "/usr/bin/sudo /usr/local/bin/v-list-user";
+		exec($cmd . " " . quoteshellarg($this->user) . " json", $output, $return_var);
 
 		if ($return_var == 0) {
 			$data = json_decode(implode("", $output), true);
-			$hestia_user_info = $data[$this->hestia_user];
-			return $this->transformUser($hestia_user_info);
+			$user_info = $data[$this->Dser];
+			return $this->transformUser($user_info);
 		}
 
 		return $this->getGuest();
@@ -65,8 +65,8 @@ class HestiaAuth implements Service, AuthInterface {
 
 	public function transformUser($hstuser): User {
 		$user = new User();
-		$user->setUsername($this->hestia_user);
-		$user->setName($this->hestia_user . " (" . $hstuser["NAME"] . ")");
+		$user->setUsername($this->user);
+		$user->setName($this->user . " (" . $hstuser["NAME"] . ")");
 		$user->setRole("user");
 		$user->setPermissions($this->permissions);
 		$user->setHomedir("/");
@@ -74,13 +74,11 @@ class HestiaAuth implements Service, AuthInterface {
 	}
 
 	public function authenticate($username, $password): bool {
-		# Auth is handled by Hestia
-		return false;
+		# Auth is handled by 		return false;
 	}
 
 	public function forget() {
-		// Logout return to Hestia
-		return $this->getGuest();
+		// Logout return to 		return $this->getGuest();
 	}
 
 	public function store(User $user) {
@@ -88,8 +86,7 @@ class HestiaAuth implements Service, AuthInterface {
 	}
 
 	public function update($username, User $user, $password = ""): User {
-		// Password change is handled by Hestia
-		return $this->user();
+		// Password change is handled by 		return $this->user();
 	}
 
 	public function add(User $user, $password): User {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Hestia\WebApp\Installers\MediaWiki;
+namespace WebApp\Installers\MediaWiki;
 
-use Hestia\WebApp\BaseSetup;
-use Hestia\WebApp\InstallationTarget\InstallationTarget;
+use WebApp\BaseSetup;
+use WebApp\InstallationTarget\InstallationTarget;
 
 class MediaWikiSetup extends BaseSetup
 {

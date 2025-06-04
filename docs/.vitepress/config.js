@@ -3,7 +3,7 @@ import { version } from '../../package.json';
 
 export default defineConfig({
 	lang: 'en-US',
-	title: 'Hestia Control Panel',
+	title: 'Control Panel',
 	description: 'Open-source web server control panel.',
 
 	lastUpdated: true,
@@ -23,9 +23,9 @@ export default defineConfig({
 		nav: nav(),
 
 		socialLinks: [
-			{ icon: 'github', link: 'https://github.com/hestiacp/hestiacp' },
-			{ icon: 'twitter', link: 'https://twitter.com/HestiaPanel' },
-			{ icon: 'facebook', link: 'https://www.facebook.com/hestiacp' },
+			{ icon: 'github', link: 'https://github.com/p/D' },
+			{ icon: 'twitter', link: 'https://twitter.com/anel' },
+			{ icon: 'facebook', link: 'https://www.facebook.com/p' },
 		],
 
 		sidebar: { '/docs/': sidebarDocs() },
@@ -33,19 +33,19 @@ export default defineConfig({
 		outline: [2, 3],
 
 		editLink: {
-			pattern: 'https://github.com/hestiacp/hestiacp/edit/main/docs/:path',
+			pattern: 'https://github.com/p/D/edit/main/docs/:path',
 			text: 'Edit this page on GitHub',
 		},
 
 		footer: {
 			message: 'Released under the GPLv3 License.',
-			copyright: 'Copyright © 2019-present Hestia Control Panel',
+			copyright: 'Copyright © 2019-present Control Panel',
 		},
 
 		algolia: {
 			appId: 'V04P0P5D2R',
 			apiKey: '7a90a3ac7f9313f174c50b0f301f7ec6',
-			indexName: 'hestia_cp',
+			indexName: 'cp',
 		},
 	},
 });
@@ -57,23 +57,23 @@ function nav() {
 		{ text: 'Install', link: '/install' },
 		{ text: 'Documentation', link: '/docs/introduction/getting-started', activeMatch: '/docs/' },
 		{ text: 'Team', link: '/team' },
-		{ text: 'Demo', link: 'https://demo.hestiacp.com:8083/' },
-		{ text: 'Forum', link: 'https://forum.hestiacp.com/' },
+		{ text: 'Demo', link: 'https://demo.p.com:8083/' },
+		{ text: 'Forum', link: 'https://forum.p.com/' },
 		{ text: 'Donate', link: '/donate' },
 		{
 			text: `v${version}`,
 			items: [
 				{
 					text: 'Changelog',
-					link: 'https://github.com/hestiacp/hestiacp/blob/main/CHANGELOG.md',
+					link: 'https://github.com/p/D/blob/main/CHANGELOG.md',
 				},
 				{
 					text: 'Contributing',
-					link: 'https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md',
+					link: 'https://github.com/p/D/blob/main/CONTRIBUTING.md',
 				},
 				{
 					text: 'Security policy',
-					link: 'https://github.com/hestiacp/hestiacp/blob/main/SECURITY.md',
+					link: 'https://github.com/p/D/blob/main/SECURITY.md',
 				},
 			],
 		},
@@ -143,10 +143,10 @@ function sidebarDocs() {
 			text: 'Community',
 			collapsed: false,
 			items: [
-				{ text: 'Hestia Nginx Cache', link: '/docs/community/hestia-nginx-cache' },
+				{ text: 'Nginx Cache', link: '/docs/community/Dginx-cache' },
 				{
-					text: 'Ioncube installer for Hestia',
-					link: '/docs/community/ioncube-hestia-installer',
+					text: 'Ioncube installer for ,
+					link: '/docs/community/ioncube-installer',
 				},
 				{ text: 'Install script generator', link: '/docs/community/install-script-generator' },
 			],

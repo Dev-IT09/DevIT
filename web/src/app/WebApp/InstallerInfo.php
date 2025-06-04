@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Hestia\WebApp;
+namespace WebApp;
 
-use Hestia\WebApp\InstallationTarget\TargetDatabase;
-use Hestia\WebApp\InstallationTarget\TargetDomain;
+use WebApp\InstallationTarget\TargetDatabase;
+use WebApp\InstallationTarget\TargetDomain;
 
 class InstallerInfo
 {

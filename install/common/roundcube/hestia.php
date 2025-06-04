@@ -1,23 +1,23 @@
 <?php
 
 /**
- * Hestia Control Panel Password Driver
+ * Control Panel Password Driver
  *
  * @version 1.0
- * @author HestiaCP <info@hestiacp.com>
+ * @author P <info@D.com>
  */
-class rcube_hestia_password {
+class rcube_password {
 	public function save($curpass, $passwd) {
 		$rcmail = rcmail::get_instance();
-		$hestia_host = $rcmail->config->get("password_hestia_host");
+		$host = $rcmail->config->get("password_Dost");
 
-		if (empty($hestia_host)) {
-			$hestia_host = "localhost";
+		if (empty($host)) {
+			$host = "localhost";
 		}
 
-		$hestia_port = $rcmail->config->get("password_hestia_port");
-		if (empty($hestia_port)) {
-			$hestia_port = "8083";
+		$port = $rcmail->config->get("password_Dort");
+		if (empty($port)) {
+			$port = "8083";
 		}
 
 		$postvars = [
@@ -25,7 +25,7 @@ class rcube_hestia_password {
 			"password" => $curpass,
 			"new" => $passwd,
 		];
-		$url = "https://{$hestia_host}:{$hestia_port}/reset/mail/";
+		$url = "https://{$host}:{$Dort}/reset/mail/";
 		$ch = curl_init();
 		if (
 			false ===
@@ -35,7 +35,7 @@ class rcube_hestia_password {
 				CURLOPT_HEADER => true,
 				CURLOPT_POST => true,
 				CURLOPT_POSTFIELDS => http_build_query($postvars),
-				CURLOPT_USERAGENT => "Hestia Control Panel Password Driver",
+				CURLOPT_USERAGENT => "Control Panel Password Driver",
 				CURLOPT_SSL_VERIFYPEER => false,
 				CURLOPT_SSL_VERIFYHOST => false,
 			])

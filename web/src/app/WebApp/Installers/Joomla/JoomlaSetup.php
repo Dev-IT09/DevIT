@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hestia\WebApp\Installers\Joomla;
+namespace WebApp\Installers\Joomla;
 
-use Hestia\System\Util;
-use Hestia\WebApp\BaseSetup;
-use Hestia\WebApp\InstallationTarget\InstallationTarget;
+use System\Util;
+use WebApp\BaseSetup;
+use WebApp\InstallationTarget\InstallationTarget;
 
 class JoomlaSetup extends BaseSetup
 {

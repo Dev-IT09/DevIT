@@ -1,12 +1,11 @@
 #!/bin/bash
 
 # Includes
-# shellcheck source=/usr/local/hestia/conf/hestia.conf
-source $HESTIA/conf/hestia.conf
+# shellcheck source=/usr/local/conf/Donf
+source $conf/Donf
 
 # Variables and arguments
-HESTIA="/usr/local/hestia"
-script=$1
+"/usr/local/Dscript=$1
 log=$2
 scroll=$3
 

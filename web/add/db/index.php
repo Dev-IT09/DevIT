@@ -1,5 +1,5 @@
 <?php
-use function Hestiacp\quoteshellarg\quoteshellarg;
+use function p\quoteshellarg\quoteshellarg;
 
 ob_start();
 $TAB = "DB";
@@ -74,7 +74,7 @@ if (!empty($_POST["ok"])) {
 		fwrite($fp, $_POST["v_password"] . "\n");
 		fclose($fp);
 		exec(
-			HESTIA_CMD .
+			CMD .
 				"v-add-database " .
 				$user .
 				" " .
@@ -229,7 +229,7 @@ if (empty($v_dbuser)) {
 $db_types = explode(",", $_SESSION["DB_SYSTEM"]);
 
 // List available database servers
-exec(HESTIA_CMD . "v-list-database-hosts json", $output, $return_var);
+exec(CMD . "v-list-database-hosts json", $output, $return_var);
 $db_hosts_tmp1 = json_decode(implode("", $output), true);
 $db_hosts_tmp2 = array_map(function ($host) {
 	return $host["HOST"];

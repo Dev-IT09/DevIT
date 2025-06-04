@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hestia\WebApp\Installers\WordPress;
+namespace WebApp\Installers\WordPress;
 
-use Hestia\System\Util;
-use Hestia\WebApp\BaseSetup;
-use Hestia\WebApp\InstallationTarget\InstallationTarget;
+use System\Util;
+use WebApp\BaseSetup;
+use WebApp\InstallationTarget\InstallationTarget;
 
 use function file_get_contents;
 
